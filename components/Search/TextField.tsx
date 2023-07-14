@@ -1,10 +1,16 @@
-import React from "react";
+import classNames from "classnames";
 
-export default function TextField () {
+import { Stylable } from "../types/props";
+
+export function TextField ({ className}: Stylable) {
+    const containerStyles = classNames(
+        'w-full',
+        className
+    )
     return (
-        <div>
+        <div className={containerStyles}>
             <input
-            className='w-full'
+            className='w-full h-full rounded-l-[4px] p-2 text-lg outline-blueDetails'
             type='text' 
             placeholder='Nunca dejes de buscar...'
             id='search' />
